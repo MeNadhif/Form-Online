@@ -113,11 +113,11 @@ function Designer() {
             const overId = over.data?.current?.elementId;
 
             const activeElementIndex = elements.findIndex((el) => {
-               el.id === activeId;
+               return el.id === activeId;
             });
 
             const overElementIndex = elements.findIndex((el) => {
-               el.id === overId;
+               return el.id === overId;
             });
 
             if (activeElementIndex === -1 || overElementIndex === -1) {
@@ -210,7 +210,7 @@ function DesignerElementWrapper({ element }: { element: FormElementInstance }) {
    });
 
    if (draggable.isDragging) return null;
-   console.log("SelectedEl", selectedElement);
+   // console.log("SelectedEl", selectedElement);
 
    const DesignerElement = FormElements[element.type].designerComponent;
    return (
