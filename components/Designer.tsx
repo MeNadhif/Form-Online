@@ -210,7 +210,6 @@ function DesignerElementWrapper({ element }: { element: FormElementInstance }) {
    });
 
    if (draggable.isDragging) return null;
-   // console.log("SelectedEl", selectedElement);
 
    const DesignerElement = FormElements[element.type].designerComponent;
    return (
@@ -268,7 +267,7 @@ function DesignerElementWrapper({ element }: { element: FormElementInstance }) {
                mouseIsOver && "opacity-30"
             )}
          >
-            <DesignerElement elementInstance={element} />;
+            <DesignerElement elementInstance={element} />
          </div>
          {bottomHalf.isOver && (
             <div className="absolute bottom-0 w-full rounded-md h-[7px] bg-primary rounded-t-none" />
